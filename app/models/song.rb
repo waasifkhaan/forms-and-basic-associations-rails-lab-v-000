@@ -25,6 +25,7 @@ class Song < ActiveRecord::Base
   def note_contents=(note_content)
    
     note_content.each do |attribute|
+      binding.pry
       if attribute.strip != ''
         self.notes.build(content: attribute)
       else 
