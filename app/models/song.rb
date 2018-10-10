@@ -23,7 +23,7 @@ class Song < ActiveRecord::Base
   
   def note_contents=(notes)
     notes.each do |attribute|
-      if content.strip != ''
+      if attribute.strip != ''
         self.notes.build(content: attribute)
       end
     end
