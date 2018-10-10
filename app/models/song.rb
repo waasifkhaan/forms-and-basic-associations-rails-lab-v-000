@@ -21,9 +21,9 @@ class Song < ActiveRecord::Base
     self.try(:genre).try(:name)
   end    
   
-  def note_contents=(notes)
+  def note_contents=(note_content)
    
-    notes.each do |attribute|
+    note_content.each do |attribute|
       if attribute.strip != ''
         self.notes.build(content: attribute)
       else 
