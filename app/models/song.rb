@@ -23,7 +23,7 @@ class Song < ActiveRecord::Base
   end    
   
   def note_contents=(note_content)
-    binding.pry
+    
     note_content.each do |attribute|
      
       if attribute.strip != ''
